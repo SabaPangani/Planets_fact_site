@@ -7,8 +7,20 @@
             <li *ngFor="let planet of planets" routerLinkActive="active-page" [ngStyle]="{'--planet-color': planet.theme}">
                 <a [routerLink]="['/planet', planet.name]">{{planet.name}}</a>
             </li>
-            <span class="planet-indicator"></span>
         </ul>
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list" (click)="showMobileNav = !showMobileNav"></i>
+
+        <div class="mobile-nav"[ngClass]="{'mobile-nav-active': showMobileNav}">
+            <div class="container">
+                <div class="wrapper">
+                    <ul class="mobile-navbar-nav">
+                        <li *ngFor="let planet of planets" [ngStyle]="{'--planet-color': planet.theme}">
+                            <span></span>
+                            <a [routerLink]="['/planet', planet.name]">{{planet.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>

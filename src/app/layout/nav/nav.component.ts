@@ -8,4 +8,5 @@ import { Planet } from 'src/app/model/planet';
 })
 export class NavComponent {
   @Input() planets:Planet[] = [];
+  showMobileNav:boolean = false;
 }
