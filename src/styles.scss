@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --light-white: #FFFFFF;
+    --very-dark-blue: #070724;
+    --dark-gray: #38384F;
+    --gray: #838391;
+    --cyan: #419EBB;
+    --dark-yellow: #EDA249;
+    --purple: #6f2ed6;
+    --light-red: #D14C32;
+    --red: #D83A34;
+    --dark-orange: #CD5120;
+    --lime: #1ec2a4;
+    --blue: #2d68f0;
+    --transparent-border:#ffffff52;
+    --spart: font-family: 'League Spartan', sans-serif;
+    --anton: font-family: 'Antonio', sans-serif;
+}
+
+html {
+    background-color: var(--very-dark-blue);
+}
+
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+h1,
+h2 {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 104px;
+}
+
+h2 {
+    font-size: 40px !important;
+    letter-spacing: -1.5px;
+    line-height: 52px;
+}
+
+h3,
+h4 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.6px;
+    line-height: 25px;
+}
+
+h4 {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.padding-m {
+    padding: 0 2em;
+}
+
+.padding-x {
+    padding: 0 3em;
+}

@@ -1,0 +1,61 @@
+<div class="container padding-m">
+    <div class="wrapper" [ngStyle]="{'--planet-color':planet?.theme}">
+        <div class="planet">
+            <img *ngIf="!isSelected || isSelected === 'geology'" [src]="planet?.images?.planet" alt="">
+            <img *ngIf="isSelected === 'overview'" [src]="planet?.images?.planet" alt="">
+            <img *ngIf="isSelected === 'structure'" [src]="planet?.images?.internal" alt="">
+            <img *ngIf="isSelected === 'geology'" [src]="planet?.images?.geology" class="surface" alt="">
+            <div class="info">
+                <div class="texts">
+                    <h1>{{planet?.name}}</h1>
+                    <p *ngIf="!isSelected || isSelected === 'overview'">{{planet?.overview?.content}}</p>
+                    <p *ngIf="isSelected === 'geology'">{{planet?.geology?.content}}</p>
+                    <p *ngIf="isSelected === 'structure'">{{planet?.structure?.content}}</p>
+                </div>
+            </div>
+            <div class="btns">
+                <button [ngClass]="{'btn-active': isSelected === 'overview'}" (click)="showDetails('overview')">
+                    <span>01</span>
+                    OVERVIEW
+                </button>
+                <button [ngClass]="{'btn-active': isSelected === 'structure'}" (click)="showDetails('structure')">
+                    <span>02</span>
+                    <span>INTERNAL</span>
+                    STRUCTURE
+                </button>
+                <button [ngClass]="{'btn-active': isSelected === 'geology'}" (click)="showDetails('geology')">
+                    <span>03</span>
+                    <span>GEOLOGY</span>
+                    SURFACE
+                </button>
+            </div>
+        </div>
+
+        <div class="overview">
+            <div class="card card-1">
+                <span>
+                    ROTATION TIME
+                </span>
+                <h2>{{planet?.rotation}}</h2>
+            </div>
+            <div class="card card-2">
+                <span>
+                    REVOLUTION TIME
+                </span>
+                <h2>{{planet?.revolution}}</h2>
+            </div>
+            <div class="card card-3">
+                <span>
+                    RADIUS
+                </span>
+                <h2>{{planet?.radius}}</h2>
+            </div>
+            <div class="card card-4">
+                <span>
+                    AVERAGE TEMP.
+                </span>
+                <h2>{{planet?.temperature}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

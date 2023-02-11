@@ -1,0 +1,14 @@
+<nav>
+    <div class="navbar padding-m">
+        <div class="logo">
+            <a>THE PLANETS</a>
+        </div>
+        <ul class="navbar-nav">
+            <li *ngFor="let planet of planets" routerLinkActive="active-page" [ngStyle]="{'--planet-color': planet.theme}">
+                <a [routerLink]="['/planet', planet.name]">{{planet.name}}</a>
+            </li>
+            <span class="planet-indicator"></span>
+        </ul>
+        <i class="bi bi-list"></i>
+    </div>
+</nav>
